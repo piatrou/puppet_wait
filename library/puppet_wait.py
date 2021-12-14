@@ -40,6 +40,7 @@ class PuppetAgent:
                 if line[:6] == 'Notice' and line[8:15] != 'Applied':
                     self.changed = True
                     return True
+        return False
 
 def main():
     module = AnsibleModule(
